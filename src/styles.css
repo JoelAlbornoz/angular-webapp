@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.home-card{
+    margin-top: 15vh;
+   
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: black !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: black !important;
+}
+
+ a {
+    color: black !important;
+}

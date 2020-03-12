@@ -1,0 +1,34 @@
+<div><section class="sample-app-content">
+    <h1>Agregar Producto</h1>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Nombre</label>
+            <input type="text"  
+                [(ngModel)]="producto.nombre"  name='nombre'required>
+        </p>
+        <p>
+            <label>Precio</label>
+            <input type="text"  
+                [(ngModel)]="producto.precio" name='precio' required>
+        </p>
+        <p>
+            <label>Descripcion</label>
+            <input type="text"  
+                [(ngModel)]="producto.descripcion" name='descripcion' required>
+        </p>
+        <p>
+            <label>Img URL</label>
+            <input type="text"  
+                [(ngModel)]="producto.img" name='img' required>
+        </p>
+        <p>
+            <label>id</label>
+            <input type="number"  
+                [(ngModel)]="producto.id" name='id' required>
+        </p>
+        <p>
+            <button type="submit" [disabled]="!f.valid">Submit</button>
+        </p>
+    </form>
+</section>
+</div>
