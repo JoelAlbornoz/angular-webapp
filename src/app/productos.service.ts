@@ -10,7 +10,7 @@ export class ProductosService {
 
 
   constructor( private http :HttpClient) {
-    this.http.get('https://angular-product-server.glitch.me/dreams').subscribe((data)=> {console.log(data)});
+    //this.http.get('https://angular-product-server.glitch.me/dreams').subscribe((data)=> {console.log(data)});
    }
 
    fetchProductos(){
@@ -25,7 +25,7 @@ export class ProductosService {
    }
 
    borrarProducto(producto){
-    this.http.delete('https://angular-product-server.glitch.me/productos', producto).subscribe((data) => {console.log(data)})
+    this.http.delete('https://angular-product-server.glitch.me/productos?id='+ producto).subscribe((data) => {console.log(data)})
    }
 
    actualizarProducto(producto){

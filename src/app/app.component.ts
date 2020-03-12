@@ -14,6 +14,6 @@ export class AppComponent {
     
   }
   ngOnInit(): void {
-     console.log(this.httpService.fetchProductos())
+     console.log(this.httpService.borrarProducto('5e697b0c635e9123b14b1731'))
   }
 }
