@@ -1,36 +1,37 @@
-<div><section class="container">
-    <h1 class="d-flex justify-content-center row">Agregar Producto</h1>
-    <div class="row">
-    <form #f="ngForm" (ngSubmit)="onSubmit()" class="container card col" >
-        <p class="row">
-            <label class="col" style="margin: 5px;">Nombre</label>
-            <input class="col form-control" style="margin: 5px;"type="text"  
-                [(ngModel)]="producto.nombre"  name='nombre'required>
-        </p>
-        <p class="row">
-            <label class="col" style="margin: 5px;">Precio</label>
-            <input class="col form-control" style="margin: 5px;" type="text"  
-                [(ngModel)]="producto.precio" name='precio' required>
-        </p>
-        <p class="row">
-            <label class="col" style="margin: 5px;">Descripcion</label>
-            <input class="col form-control" style="margin: 5px;" type="text"  
-                [(ngModel)]="producto.descripcion" name='descripcion' required>
-        </p>
-        <p class="row">
-            <label class="col" style="margin: 5px;">Img URL</label>
-            <input class="col form-control" style="margin: 5px;" type="text"  
-                [(ngModel)]="producto.img" name='img' (click)=' resetImage()'required>
-        </p>
-       
-        <p class="row">
-            <button type="Agregar" class="col btn btn-primary" [disabled]="!f.valid">Submit</button>
-        </p>
-    </form>
-    
-    <div *ngIf='producto.img' class="col container">
-        <img src={{producto.img}} class='row' style='max-width: 35vw; margin: 30px;'alt="Imagen del producto">
-    </div>
-</div>
-</section>
+<div>
+    <section class="container">
+        <h1 class="d-flex justify-content-center row">Agregar Producto</h1>
+        <div class="row">
+            <form #f="ngForm" (ngSubmit)="onSubmit()" class="container card col">
+                <p class="row">
+                    <label class="col" style="margin: 5px;">Nombre</label>
+                    <input class="col form-control" style="margin: 5px;" type="text" [(ngModel)]="producto.nombre"
+                        name='nombre' required>
+                </p>
+                <p class="row">
+                    <label class="col" style="margin: 5px;">Precio</label>
+                    <input class="col form-control" style="margin: 5px;" type="text" [(ngModel)]="producto.precio"
+                        name='precio' required>
+                </p>
+                <p class="row">
+                    <label class="col" style="margin: 5px;">Descripcion</label>
+                    <input class="col form-control" style="margin: 5px;" type="text" [(ngModel)]="producto.descripcion"
+                        name='descripcion' required>
+                </p>
+                <p class="row">
+                    <label class="col" style="margin: 5px;">Img URL</label>
+                    <input class="col form-control" style="margin: 5px;" type="text" [(ngModel)]="producto.img"
+                        name='img' (click)=' resetImage()' required>
+                </p>
+
+                <p class="row">
+                    <button type="Agregar" class="col btn btn-primary" [disabled]="!f.valid">Submit</button>
+                </p>
+            </form>
+
+            <div *ngIf='producto.img' class="col container">
+                <img src={{producto.img}} class='row' style='max-width: 35vw; margin: 30px;' alt="Imagen del producto">
+            </div>
+        </div>
+    </section>
 </div>
