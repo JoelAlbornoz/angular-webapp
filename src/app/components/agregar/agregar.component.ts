@@ -13,7 +13,7 @@ export class AgregarComponent implements OnInit {
 
 
   constructor(public productosService : ProductosService, private route: ActivatedRoute) { 
-    this.producto = new Producto(0,'','',0,'');
+    this.producto = new Producto(0,'','','');
   }
 
   ngOnInit(): void {
